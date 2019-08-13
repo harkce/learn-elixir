@@ -41,8 +41,8 @@ defmodule Identicon do
     %Identicon.Image{
       image
       | grid:
-          Enum.filter(grid, fn {code, _index} ->
-            rem(code, 2) == 0
+          Enum.filter(grid, fn {square, _index} ->
+            rem(square, 2) == 0
           end)
     }
   end
